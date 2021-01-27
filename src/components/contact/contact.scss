@@ -1,0 +1,31 @@
+@import "../../styles/colors.scss";
+
+$borderRadius: 3px;
+
+.container{
+    form{
+        div.form-group{
+            label{
+                color: $text;
+                display: none;
+            }
+            input, textarea{
+                border-radius: $borderRadius;
+            }
+        }
+        button{
+            width: 100%;
+            background-color: $background;
+            border: none;
+        }
+        button:hover{
+            background-color: $background;
+        }
+        button:active, button:focus{
+            background-color: $highlight !important;
+        }
+        button.btn{
+            border-radius: $borderRadius;
+        }
+    }
+}

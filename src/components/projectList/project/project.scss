@@ -1,0 +1,28 @@
+div.project{
+    div.row{
+        display: flex;
+        flex-direction: row;
+        div.info{
+            display: flex;
+            align-items: center;
+            h2{
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+div.project:nth-child(even){
+    div.row{
+        flex-direction: row-reverse;
+    }
+}
+
+div.project:nth-child(odd){
+    text-align: right;
+    div.row{
+        div.info{
+            justify-content: end;
+        }
+    }
+}

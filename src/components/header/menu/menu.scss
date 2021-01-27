@@ -1,0 +1,45 @@
+@import '../../../styles/breakpoint.scss';
+@import '../../../styles/colors.scss';
+
+$navBrandWidth: 55px;
+$asideWidth: 125px;
+$menuPaddingHeight: 1rem;
+$menuPaddingSides: calc((#{$asideWidth}/2) - (#{$navBrandWidth}/2));
+
+nav.navbar{
+    padding: $menuPaddingHeight $menuPaddingSides;
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 100;
+    div#links{
+        div.navbar-nav{
+            li.nav-item{
+                a{
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+                a:link, a:visited, a:active{
+                    color: $text;
+                }
+                a:hover{
+                    color: $highlight;
+                }
+            }
+        }
+    }
+    button.navbar-toggler{
+        padding: 0;
+        span{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    }
+    @media (min-width: $lg) {
+        div#links{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

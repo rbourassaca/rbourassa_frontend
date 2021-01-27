@@ -1,0 +1,17 @@
+$gutter: 10px;
+
+.masonry-grid {
+    display: flex;
+    margin-left: -$gutter/2; /* gutter size offset */
+    width: 100%;
+  }
+  .masonry-grid-col {
+    padding-left: $gutter; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .masonry-grid-col div { /* change div to reference your elements you put in <Masonry> */
+    width: 100%;
+    margin-bottom: $gutter;
+  }
