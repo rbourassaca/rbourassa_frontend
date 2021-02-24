@@ -150,7 +150,8 @@ var Preview = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$props2 = this.props,
           onClick = _this$props2.onClick,
-          playIcon = _this$props2.playIcon;
+          playIcon = _this$props2.playIcon,
+          previewTabIndex = _this$props2.previewTabIndex;
       var image = this.state.image;
       var flexCenter = {
         display: 'flex',
@@ -192,7 +193,7 @@ var Preview = /*#__PURE__*/function (_Component) {
         style: styles.preview,
         className: "react-player__preview",
         onClick: onClick,
-        tabIndex: 0,
+        tabIndex: previewTabIndex,
         onKeyPress: this.handleKeyPress
       }, playIcon || defaultPlayIcon);
     }

@@ -214,7 +214,7 @@ var FilePlayer = /*#__PURE__*/function (_Component) {
       }
 
       if (this.props.url !== prevProps.url && !(0, _utils.isMediaStream)(this.props.url)) {
-        this.player.removeAttribute('srcObject');
+        this.player.srcObject = null;
       }
     }
   }, {
